@@ -1,0 +1,120 @@
+<div class="callback modal" id="callback">
+  <div class="modal__header">
+    <h3>Обратный звонок</h3>
+    <p>Заполните форму и мы перезвоним Вам в ближайшее время</p>
+  </div>
+  <form class="form" id="callback__form">
+    <div class="form__row">
+      <label for="callback-name"><span>*</span>Ваше имя</label>
+      <input id="callback-name" type="text" name="name" placeholder="Иванов Иван Иванович" required>
+    </div>
+    <div class="form__row">
+      <label for="callback-tel"><span>*</span>Контактный телефон</label>
+      <input id="callback-tel" class="mask-phone" type="text" name="phone" required placeholder="+7 XXX XXX XX XX">
+    </div>
+    <div class="form__row form__link">
+      <div class="form__link-column">
+        <button class="btn btn-orange" type="submit">Отправить</button>
+        <div>
+          <p><span>*</span>Даю согласие на обработку</p>
+          <a href="#"> персональных данных</a>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>
+
+
+<div class="work modal" id="work">
+  <div class="modal__header">
+    <h3>Электрослесарь по обслуживанию и ремонту оборудования</h3>
+    <p>Заполните форму и мы перезвоним Вам в ближайшее время</p>
+  </div>
+  <form class="form" id="work__form">
+    <div class="form__row">
+      <label for="offers-name"><span>*</span>Ваше имя</label>
+      <input id="offers-name" type="text" name="name" placeholder="Иванов Иван Иванович" required>
+    </div>
+    <div class="form__row">
+      <label for="work-pos"><span>*</span>Желаемая должность</label>
+      <input id="work-pos" name="pos" type="text" required>
+    </div>
+    <div class="form__row">
+      <label for="work-email"><span>*</span>Email</label>
+      <input id="work-email" type="email" name="email" placeholder="name@sitename.ru" required>
+    </div>
+    <div class="form__row">
+      <label for="work-tel"><span>*</span>Контактный телефон</label>
+      <input id="work-tel" class="mask-phone" type="text" name="phone" placeholder="+7 XXX XXX XX XX" required>
+    </div>
+    <div class="form__row">
+      <label for="work-address"><span>*</span>Место жительства</label>
+      <input id="work-address" name="address" type="text" required>
+    </div>
+    <div class="form__row">
+      <label for="work-offer">Комментарий</label>
+      <textarea name="work-offer" id="offers-offer"></textarea>
+    </div>
+    <div class="form__row form__link">
+      <label>Резюме</label>
+      <div class="form__link-row">
+        <input type="file" id="file" class="file-upload__input" name="myFile[]">
+        <button type="button" class="btn-nobg file-btn file-upload__button">Прикрепить файл</button>
+        <span class="file-upload__label">Файл не выбран</span>
+      </div>
+      <div class="form__link-column">
+        <button class="btn btn-orange" type="submit">Отправить</button>
+        <div>
+          <p><span>*</span>Даю согласие на обработку</p>
+          <a href="#"> персональных данных</a>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>
+
+<div class="order modal" id="order">
+  <div class="modal__header">
+    <h3>Проволока стальная оцинкованная для сердечников проводов ГОСТ 9850-72</h3>
+    <p>Заполните форму и мы перезвоним Вам в ближайшее время</p>
+  </div>
+  <form class="form" id="order__form">
+    <div class="form__row">
+      <label for="order-name"><span>*</span>Ваше имя</label>
+      <input id="order-name" type="text" name="name" placeholder="Иванов Иван Иванович" required>
+    </div>
+    <div class="form__row">
+      <label for="order-email"><span>*</span>Email</label>
+      <input id="order-email" type="email" name="email" placeholder="name@sitename.ru" required>
+    </div>
+    <div class="form__row">
+      <label for="order-tel"><span>*</span>Контактный телефон</label>
+      <input id="order-tel" class="mask-phone" type="text" name="phone" placeholder="+7 XXX XXX XX XX" required>
+    </div>
+    <div class="form__row">
+      <label for="order-tel"><span>*</span>Количество продукта</label>
+      <div class="form__row-count">
+        <button class='down_count count-btn' title='Down'>
+          <img src="./img/svg-icon/minus.svg" alt="" />
+        </button>
+        <input class='counter' type="text" placeholder="value..." value='1' />
+        <button class='up_count count-btn' title='Up'>
+          <img src="./img/svg-icon/plus.svg" alt="" />
+        </button>
+      </div>
+    </div>
+    <div class="form__row">
+      <label for="order-offer">Комментарий</label>
+      <textarea name="order-offer" id="offers-offer"></textarea>
+    </div>
+    <div class="form__row form__link">
+      <div class="form__link-column">
+        <button class="btn btn-orange" type="submit">Отправить</button>
+        <div>
+          <p><span>*</span>Даю согласие на обработку</p>
+          <a href="#"> персональных данных</a>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>
