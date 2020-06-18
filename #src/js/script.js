@@ -114,19 +114,19 @@ $(document).ready(function () {
 
   //Plus minus counter
 
-  $('.count-btn').click(function (e) {
-    var button_classes, value = +$('.counter').val();
-    button_classes = $(e.currentTarget).prop('class');
-    if (button_classes.indexOf('up_count') !== -1) {
-      value = (value) + 1;
-    } else {
-      value = (value) - 1;
-    }
-    value = value < 0 ? 0 : value;
-    $('.counter').val(value);
+  $('.minus').click(function () {
+    var $input = $(this).parent().find('input');
+    var count = parseInt($input.val()) - 1;
+    count = count < 1 ? 1 : count;
+    $input.val(count);
+    $input.change();
+    return false;
   });
-  $('.counter').click(function () {
-    $(this).focus().select();
+  $('.plus').click(function () {
+    var $input = $(this).parent().find('input');
+    $input.val(parseInt($input.val()) + 1);
+    $input.change();
+    return false;
   });
 
 
@@ -643,6 +643,8 @@ $(document).ready(function () {
       }
     }
   });
+
+
   $("#work__form").validate({
     rules: {
       name: {
@@ -670,6 +672,8 @@ $(document).ready(function () {
       }
     }
   });
+
+
   $("#form__offers").validate({
     rules: {
       name: {
@@ -701,30 +705,32 @@ $(document).ready(function () {
       }
     }
   });
-  $("#order__form").validate({
-    rules: {
-      name: {
-        regexpName: true,
-        required: true,
-        minlength: 3,
-      },
-      email: {
-        regexpEmail: true,
-        required: true,
-        email: true
-      },
-      address: {
-        required: true,
-        minlength: 3,
-      },
-      phone: {
-        required: true,
-        minlength: 18,
+
+  $('#btn-submit').click(function () {
+    $("#order__form").validate({
+      rules: {
+        name: {
+          regexpName: true,
+          required: true,
+          minlength: 3,
+        },
+        email: {
+          regexpEmail: true,
+          required: true,
+          email: true
+        },
+        address: {
+          required: true,
+          minlength: 3,
+        },
+        phone: {
+          required: true,
+          minlength: 18,
+        }
       }
-    }
+    });
+
   });
-
-
   /* инициализация маски телефона (плагин maskedinput) */
   $('.mask-phone').mask('+0 (000) 000-00-00');
 

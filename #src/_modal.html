@@ -94,13 +94,13 @@
     <div class="form__row">
       <label for="order-tel"><span>*</span>Количество продукта</label>
       <div class="form__row-count">
-        <button class='down_count count-btn' title='Down'>
+        <span class='down_count minus count-btn'>
           <img src="./img/svg-icon/minus.svg" alt="" />
-        </button>
+        </span>
         <input class='counter' type="text" placeholder="value..." value='1' />
-        <button class='up_count count-btn' title='Up'>
+        <span class='up_count plus count-btn'>
           <img src="./img/svg-icon/plus.svg" alt="" />
-        </button>
+        </span>
       </div>
     </div>
     <div class="form__row">
@@ -109,7 +109,7 @@
     </div>
     <div class="form__row form__link">
       <div class="form__link-column">
-        <button class="btn btn-orange" type="submit">Отправить</button>
+        <button id="btn-submit" class="btn btn-orange" type="submit">Отправить</button>
         <div>
           <p><span>*</span>Даю согласие на обработку</p>
           <a href="#"> персональных данных</a>
@@ -117,4 +117,24 @@
       </div>
     </div>
   </form>
+</div>
+
+
+
+
+<div class="thanks__modal modal" id="thanks">
+  <div class="thanks__inner">
+    <div class="thanks__img">
+      <svg width="58" height="58" viewBox="0 0 58 58" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="29" cy="29" r="28.25" stroke="white" stroke-width="1.5" />
+        <path d="M16 29L24.5 37.5L42 20" stroke="white" stroke-width="1.5" stroke-linecap="round"
+          stroke-linejoin="round" />
+      </svg>
+
+    </div>
+    <div class="thanks__text">
+      <h3>Спасибо!</h3>
+      <p>В скором времени мы с Вами свяжемся</p>
+    </div>
+  </div>
 </div>
