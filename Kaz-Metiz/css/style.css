@@ -872,6 +872,7 @@ img {
   z-index: 9999;
   position: fixed;
   left: 0;
+  height: 81px;
   top: 0;
   right: 0;
   background-color: #FFFFFF;
@@ -3485,6 +3486,10 @@ img {
     font-size: 14px;
     line-height: 17px;
     padding: 14px 10px;
+  }
+
+  .header {
+    height: inherit;
   }
 
   .header__inner {
