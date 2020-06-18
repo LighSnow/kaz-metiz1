@@ -2996,7 +2996,7 @@ img {
 .sales__inner .gm-style .gm-style-iw-c {
   width: 207px;
   height: 86px;
-  padding: 16px 22px;
+  padding: 16px 10px 16px 22px;
 }
 
 .sales__inner .gm-style .gm-style-iw-d {
@@ -3029,7 +3029,7 @@ img {
 
 .sales__inner #map__content p span {
   font-size: 16px;
-  font-weight: 500;
+  font-weight: 400;
 }
 
 .sales__items {
