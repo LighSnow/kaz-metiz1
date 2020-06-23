@@ -3343,11 +3343,11 @@ i {
     opacity: 1;
   }
 
-  .menu__list li.active > a {
+  .menu__list li .active {
     color: #FF8619;
   }
 
-  .menu__list li.active > a::after {
+  .menu__list li .active::after {
     opacity: 1;
   }
 
