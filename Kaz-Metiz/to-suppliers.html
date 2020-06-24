@@ -965,6 +965,19 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="js/libs.min.js"></script>
   <script src="js/script.min.js"></script>
+
+  <script>
+    $("[data-scroll]").on("click", function (event) {
+      event.preventDefault();
+
+      let elementID = $(this).data('scroll');
+      let elementOffset = $(elementID).offset().top;
+
+      $("html, body").animate({
+        scrollTop: elementOffset - 100
+      }, 1000);
+    });
+  </script>
 </body>
 
 </html>
