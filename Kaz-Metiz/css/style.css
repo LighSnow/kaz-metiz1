@@ -1109,7 +1109,7 @@ i {
   color: #FF8619;
 }
 
-.menu__list {
+.menu ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1118,11 +1118,11 @@ i {
           align-items: center;
 }
 
-.menu__list > li {
+.menu ul > li {
   margin: 0px 0px 0px 15px;
 }
 
-.menu__link {
+.menu ul li a {
   font-size: 14px;
   font-weight: 600;
   color: #292929;
@@ -1130,7 +1130,7 @@ i {
   position: relative;
 }
 
-.menu__link::after {
+.menu ul li a::after {
   content: '';
   position: absolute;
   left: 0;
@@ -1144,6 +1144,14 @@ i {
   -o-transition: opacity 0.2s ease;
   transition: opacity 0.2s ease;
   z-index: 10;
+}
+
+.menu ul li .active {
+  color: #FF8619;
+}
+
+.menu ul li .active::after {
+  opacity: 1;
 }
 
 .menu__btn {
@@ -1233,7 +1241,7 @@ i {
   padding: 30px 30px 0;
 }
 
-.dropdown__buyers ul {
+.dropdown__list ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1243,16 +1251,20 @@ i {
   border-top: 1px solid #E4E4E4;
 }
 
-.dropdown__buyers ul li {
+.dropdown__list ul li {
   margin: 0px 0px 0px 15px;
 }
 
-.dropdown__buyers ul li a {
+.dropdown__list ul li a {
   font-weight: 600;
   font-size: 13px;
   line-height: 16px;
   color: #292929;
   padding: 21px 10px;
+}
+
+.dropdown__list ul li a:hover::after {
+  display: none;
 }
 
 .slider {
@@ -1631,6 +1643,12 @@ i {
   border: 1px solid #E4E4E4;
   border-radius: 6px;
   padding: 0px 0px 23px 0px;
+}
+
+.production .catalog__item-image {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 169px;
+          flex: 0 1 169px;
 }
 
 .advantages,
@@ -2041,6 +2059,9 @@ i {
 
 .catalog-page .catalog__item-image {
   margin: 0px 0px 18px 0px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 248px;
+          flex: 0 1 248px;
 }
 
 .catalog-page .catalog__text {
@@ -3380,28 +3401,92 @@ i {
 }
 
 @media only screen and (min-width: 880px) {
-  .menu__list > li:hover .dropdown__menu {
-    display: block;
-  }
-
-  .menu__list li:hover > a {
+  .menu ul li:hover > a {
     color: #FF8619;
   }
 
-  .menu__list li:hover > a::after {
+  .menu ul li:hover > a::after {
     opacity: 1;
   }
 
-  .menu__list li .active {
-    color: #FF8619;
-  }
-
-  .menu__list li .active::after {
-    opacity: 1;
-  }
-
-  .menu__list li:first-child {
+  .menu ul li:first-child {
     margin: 0;
+  }
+
+  .dropdown__catalog ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    margin: 0 -8px;
+  }
+
+  .dropdown__catalog ul li {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 25%;
+            flex: 0 1 25%;
+    text-align: center;
+    margin: 0px 0px 30px 0px;
+    padding: 0 8px;
+  }
+
+  .dropdown__catalog ul li a {
+    padding: 0;
+    margin: 0 0 16px 0;
+    background-color: #F2F7FB;
+  }
+
+  .dropdown__catalog ul li a::after {
+    display: none;
+  }
+
+  .dropdown__catalog ul li a img {
+    height: 155px;
+    -o-object-fit: contain;
+       object-fit: contain;
+    -webkit-transition: -webkit-transform .3s ease;
+    transition: -webkit-transform .3s ease;
+    -o-transition: transform .3s ease;
+    transition: transform .3s ease;
+    transition: transform .3s ease, -webkit-transform .3s ease;
+  }
+
+  .dropdown__catalog ul li a:hover img {
+    -webkit-transform: scale(1.05);
+        -ms-transform: scale(1.05);
+            transform: scale(1.05);
+  }
+
+  .dropdown__catalog ul li h3 a {
+    font-size: 17px;
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 26px;
+    color: #147FBC;
+    padding: 0;
+    margin: 0;
+    background-color: transparent;
+  }
+
+  .dropdown__catalog ul li h3 a:hover {
+    color: #FF8619;
+  }
+
+  .dropdown__catalog ul li p {
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: 600;
+    color: #5b5b5b;
+    text-align: center;
+    width: 100%;
+  }
+
+  .dropdown__list ul li a {
+    background-color: transparent;
   }
 
   .slider__inner {
@@ -3411,6 +3496,10 @@ i {
 }
 
 @media only screen and (min-width: 881px) {
+  .menu ul > li:hover .dropdown__menu {
+    display: block;
+  }
+
   .reviews .catalog__item:hover {
     border-color: #147FBC;
   }
@@ -3553,23 +3642,23 @@ i {
     padding: 10px 15px 10px 15px;
   }
 
-  .menu__list > li {
+  .menu ul > li {
     margin: 0px 0px 0px 5px;
   }
 
-  .dropdown__buyers ul {
+  .dropdown__list ul {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
 
-  .dropdown__buyers ul li {
-    -webkit-box-flex: 25%;
-        -ms-flex: 25%;
-            flex: 25%;
+  .dropdown__list ul li {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
     text-align: center;
   }
 
-  .dropdown__buyers ul li a {
+  .dropdown__list ul li a {
     padding: 21px 5px;
   }
 
@@ -3634,10 +3723,6 @@ i {
 @media only screen and (max-width: 980px) {
   .btn-header {
     padding: 10px;
-  }
-
-  .menu__link {
-    padding: 32px 5px;
   }
 }
 
@@ -3772,6 +3857,10 @@ i {
 
   .menu__mobile-link {
     position: relative;
+  }
+
+  .menu ul li a {
+    padding: 22px 5px;
   }
 
   .menu__btn {
@@ -4602,6 +4691,12 @@ i {
     padding: 60px 0 40px 0;
   }
 
+  .production .catalog__item-image {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 110px;
+            flex: 0 1 110px;
+  }
+
   .advantages .catalog__column,
   .tabs .catalog__column {
     -webkit-box-flex: 0;
@@ -4691,6 +4786,12 @@ i {
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: start;
+  }
+
+  .catalog-page .catalog__item-image {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 120px;
+            flex: 0 1 120px;
   }
 
   .history {
@@ -5020,5 +5121,20 @@ i {
     font-size: 24px;
     line-height: 26px;
     margin: 0px 0px 15px 0px;
+  }
+}
+
+@media only screen and (min-width: 880px) and (max-width: 1100px) {
+  .dropdown__catalog ul li {
+    margin: 0px 0px 20px 0px;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 33.333333%;
+            flex: 0 1 33.333333%;
+  }
+}
+
+@media only screen and (min-width: 880px) and (max-width: 980px) {
+  .dropdown__catalog ul li a {
+    padding: 0;
   }
 }
