@@ -757,21 +757,21 @@ $(document).ready(function () {
       return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
     }
   };
-  var body = document.querySelector('body');
+  let body = document.querySelector('body');
 
   if (isMobile.any()) {
     body.classList.add('touch');
     var arrow = document.querySelectorAll('.arrow');
     for (i = 0; i < arrow.length; i++) {
-      var thisLink = arrow[i].previousElementSibling;
-      var subMenu = arrow[i].nextElementSibling;
-      var thisArrow = arrow[i];
-      var mobileLink = document.querySelector('.menu__mobile-link');
+      let thisLink = arrow[i].previousElementSibling;
+      let subMenu = arrow[i].nextElementSibling;
+      let thisArrow = arrow[i];
+      // let mobileLink = document.querySelector('.menu__mobile-link');
       thisLink.classList.add('parent');
       arrow[i].addEventListener('click', function () {
         subMenu.classList.toggle('open');
         thisArrow.classList.toggle('active');
-        mobileLink.classList.toggle('active')
+        thisLink.classList.toggle('active')
       });
     }
   } else {
