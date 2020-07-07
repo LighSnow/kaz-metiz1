@@ -297,6 +297,7 @@ $(document).ready(function () {
       arrows: false,
       fade: true,
       asNavFor: '.slider-nav',
+      adaptiveHeight: true,
       responsive: [{
         breakpoint: 881,
         settings: {
@@ -321,7 +322,15 @@ $(document).ready(function () {
           arrows: true,
           slidesToShow: 3
         }
-      }, ]
+      },
+      {
+        breakpoint: 880,
+        settings: {
+          arrows: false,
+          slidesToShow: 3
+        }
+      },
+     ]
     });
   }
 
