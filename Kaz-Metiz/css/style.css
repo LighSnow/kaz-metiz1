@@ -1168,6 +1168,12 @@ i {
   color: #147FBC;
 }
 
+.menu__btn a svg {
+  display: block;
+  height: 22px;
+  width: 22px;
+}
+
 .menu__btn a + a {
   margin: 0px 0px 0px 15px;
 }
